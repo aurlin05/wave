@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/home_wave_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+    <FrameLayout
+        android:id="@+id/inner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_wave_bg"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/outer_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="200dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/rounded_top"
+            android:elevation="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPasswordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeColor="@color/home_wave_bg"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:background="@color/home_wave_bg"
+                android:backgroundTint="@color/home_wave_bg"
+                android:fontFamily="@font/archivo_black"
+                android:gravity="center_vertical|start"
+                android:hint="@string/empty"
+                android:inputType="textPassword"
+                android:paddingHorizontal="25dp"
+                android:text="@string/amount"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"
+
+                app:boxBackgroundMode="none"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="140dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/wave_card"
+        android:contentDescription="@string/wave_logo"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/qr_code_image_view"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="175dp"
+        android:contentDescription="@string/qrcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_buttons_layout"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Transfer button -->
+        <ImageView
+            android:id="@+id/transfer_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"
+            android:padding="5dp"
+            android:background="@drawable/circulare_font_blue_person"
+            android:src="@drawable/person"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Payments button -->
+        <ImageView
+            android:id="@+id/payments_button"
+            android:layout_width="50dp"
+            android:padding="5dp"
+            android:background="@drawable/circular_yellow"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"
+            android:src="@drawable/shopping"
+            app:layout_constraintStart_toEndOf="@id/transfer_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Credit button -->
+        <ImageView
+            android:id="@+id/credit_button"
+            android:layout_width="50dp"
+            android:padding="5dp"
+            android:background="@drawable/circular_credit_blue"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"
+            android:src="@drawable/phone"
+            app:layout_constraintStart_toEndOf="@id/payments_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Bank button -->
+        <ImageView
+            android:id="@+id/bank_button"
+            android:layout_width="50dp"
+            android:padding="5dp"
+            android:background="@drawable/red_bank"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/bank"
+            app:layout_constraintStart_toEndOf="@id/credit_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Gifts button -->
+        <ImageView
+            android:id="@+id/gifts_button"
+            android:layout_width="50dp"
+            android:padding="5dp"
+            android:background="@drawable/green_gift"
+            android:layout_height="50dp"
+            android:layout_margin="25dp"
+            android:src="@drawable/gift"
+            app:layout_constraintStart_toEndOf="@id/bank_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:foreground="@drawable/number_click_effect"
+        android:id="@+id/setting_btn"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/white_setting" />
+<ListView
+    android:id="@+id/list_view_transactions"
+    android:layout_gravity="center"
+    android:layout_marginTop="285dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+</ListView>
+
+</FrameLayout>

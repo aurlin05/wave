@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État lorsque le bouton est pressé -->
+    <item android:id="@+id/zoom_in"
+        android:drawable="@drawable/button_zoomed"
+        android:state_pressed="true" />
+
+    <!-- État lorsque le bouton est relâché -->
+    <item android:id="@+id/normal"
+        android:drawable="@drawable/rounded_corner" />
+
+    <!-- Animation pour zoomer -->
+    <transition
+        android:fromId="@id/normal"
+        android:toId="@id/zoom_in">
+        <animation-list>
+            <item android:drawable="@drawable/button_zoomed"
+                android:duration="400"/>
+        </animation-list>
+    </transition>
+
+</animated-selector>

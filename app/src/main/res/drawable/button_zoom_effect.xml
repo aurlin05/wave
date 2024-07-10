@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- État lorsque le bouton est pressé -->
+    <item android:drawable="@drawable/button_zoom_in" android:state_pressed="true" />
+
+    <!-- État lorsque le bouton est activé mais non pressé -->
+    <item android:drawable="@drawable/rounded_corner" />
+
+</selector>

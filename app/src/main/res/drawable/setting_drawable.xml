@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/white_setting"
+            android:gravity="center"/>
+    </item>
+    <item>
+        <ripple android:color="?android:colorControlHighlight">
+            <item android:id="@android:id/mask">
+                <color android:color="@color/gray" />
+            </item>
+        </ripple>
+    </item>
+</layer-list>
